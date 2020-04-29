@@ -494,6 +494,24 @@ h2 {
                 @include screen('mobile') {
                     padding-bottom: 15px;
                 }
+
+                .img-container {
+
+                    img {
+                        transition: all .3s;
+
+                    }
+                }
+
+                &:hover {
+                    .img-container {
+                        transition: all .3s;
+
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
             }
         }
 
@@ -628,6 +646,7 @@ h2 {
 
         .images {
             position: relative;
+
             .img-container {
                 &.bg_c {
                     @include aspect-ratio(2, 1);
@@ -720,27 +739,34 @@ h2 {
                 @include screen('xs_mobile') {
                     width: calc(100% + 2.7em);
                 }
+
                 a {
                     color: $color-word;
+
                     &:hover {
                         color: $primaryColor;
                     }
                 }
             }
-            .share_grp{
-                display:inline-block;
-                margin:1em .5em 0;
-                vertical-align:middle;
-                .fb_like_share, .line_share{
+
+            .share_grp {
+                display: inline-block;
+                margin: 1em .5em 0;
+                vertical-align: middle;
+
+                .fb_like_share,
+                .line_share {
                     float: left;
-                    margin-right:5px;
+                    margin-right: 5px;
                 }
             }
-            .time{
-                display:inline-block;
+
+            .time {
+                display: inline-block;
                 margin: 1em 0 0;
-                vertical-align:middle;
+                vertical-align: middle;
             }
+
             .brief {
                 height: 6em;
                 display: -webkit-box;
@@ -783,9 +809,10 @@ h2 {
             @include screen('mobile') {
                 padding-bottom: 15px;
             }
-            .img-container{
-                .mask{
-                    &:after{
+
+            .img-container {
+                .mask {
+                    &:after {
                         background-color: $primaryColor;
                     }
                 }
@@ -796,8 +823,9 @@ h2 {
                 .article_block {
                     .img-container.bg_c {
                         background: $secondaryColor;
-                        .mask{
-                            &:after{
+
+                        .mask {
+                            &:after {
                                 background-color: $secondaryColor;
                             }
                         }
@@ -867,12 +895,15 @@ h2 {
         }
     }
 }
-.mask{
+
+.mask {
     margin: 0 auto;
-    position:relative;
-    img{
+    position: relative;
+
+    img {
         //width:100%;
     }
+
     &:before {
         width: 100%;
         height: 100%;
@@ -883,7 +914,8 @@ h2 {
         background-color: #DEDEDE;
         z-index: 2;
     }
-  //設定第2層綠色動畫
+
+    //設定第2層綠色動畫
     &:after {
         width: 100%;
         height: 100%;
@@ -895,6 +927,7 @@ h2 {
         z-index: 1;
     }
 }
+
 .mask.effect {
     &:before {
         width: 0;
@@ -902,6 +935,7 @@ h2 {
         transition: visibility 0s .5s, width .5s cubic-bezier(.55, .055, .675, .19);
         visibility: hidden;
     }
+
     &:after {
         width: 0;
         -webkit-transition: background-color 0s .8s, visibility 0s 1.2s, width .5s .5s cubic-bezier(.215, .61, .355, 1);
@@ -909,9 +943,10 @@ h2 {
         visibility: hidden;
     }
 }
-.popular_articles{
-    .mask{
-        &:after{
+
+.popular_articles {
+    .mask {
+        &:after {
             background-color: $primaryColor;
         }
     }
