@@ -1,0 +1,46 @@
+.category {
+    @extend %clearfix;
+    text-align: left;
+    margin: 1em auto;
+    ul, .tags_block {
+        @include li-reset;
+        li {
+            margin: 0 .6em .6em 0;
+            display: block;
+            float: left;
+        }
+    }
+    a {
+        background:$lightColor;
+        padding: 0 1em;
+        display: block;
+        color: #fff;
+        font-size:.875em;
+        line-height:2em;
+        border:1px solid $lightColor;
+        @include box-sizing();
+        border-radius:20px;
+        transition:all .3s;
+        // &:hover,
+        // &:focus {
+        //     color: #FFF;
+        //     box-shadow: none;
+        // }
+        &:hover,
+        &:focus,
+        &.active {
+            color: $lightColor;
+            background: #fff;
+        }
+        span {
+            &:before {
+                content: "(";
+                display: inline-block;
+            }
+            &:after {
+                content: ")";
+                display: inline-block;
+            }
+        }
+    }
+}
